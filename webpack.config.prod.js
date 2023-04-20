@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -37,12 +37,5 @@ module.exports = {
       test: /\.(png|jpg|gif|webp)$/,
       type: 'asset/resource'
     }]
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    },
-    port: 5000,
-    open: true
   }
 }
